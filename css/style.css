@@ -1,5 +1,5 @@
 @font-face {
-    font-family: inter;
+    font-family: 'Inter';
     src: url('../assets/Inter/static/Inter-Regular.ttf');
 }
 
@@ -19,5 +19,6 @@ nav{
 }
 
 nav, p{
+    font-family: 'Inter';
     padding-left: 10%;
 }
