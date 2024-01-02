@@ -3,22 +3,73 @@
     src: url('../assets/Inter/static/Inter-Regular.ttf');
 }
 
+:root{
+    --colorBlue: #051740;
+    --gradientBlue: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.19) 100%), #051740;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
 header{
-    width: 100%;
-    padding: 1% 2%;
+    padding: 2rem 15.625rem;
     background-color: #051740;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav{
     color: white;
     display: flex;
+    justify-content: space-between;
     width: 50%;
-    justify-content: end;
 }
 
-nav, p{
+nav p{
+    display: flex;
+    justify-content: end;
     font-family: 'Inter';
-    padding-left: 10%;
+}
+
+.footer-top {
+    background: var(--gradientBlue);
+    padding: 2rem 15.625rem;
+    color: #FFF;
+    font-family: 'Inter';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-top img {
+    width: 78px;
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    color: #FFF;
+    font-family: 'Inter';
+    background-color: var(--colorBlue);
+    width: 100%;
+    padding: 1rem 15.625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    display: flex;
+       
+}
+
+.footer-bottom a {
+    color: inherit;
+    text-decoration: none;
+    padding-left: 2rem; 
 }
