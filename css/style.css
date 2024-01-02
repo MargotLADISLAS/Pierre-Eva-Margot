@@ -1,0 +1,23 @@
+@font-face {
+    font-family: inter;
+    src: url('../assets/Inter/static/Inter-Regular.ttf');
+}
+
+header{
+    width: 100%;
+    padding: 1% 2%;
+    background-color: #051740;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav{
+    color: white;
+    display: flex;
+    width: 50%;
+    justify-content: end;
+}
+
+nav, p{
+    padding-left: 10%;
+}
