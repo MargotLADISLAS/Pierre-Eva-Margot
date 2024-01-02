@@ -1,32 +1,46 @@
-@font-face {
-    font-family: 'Inter';
-    src: url('../assets/Inter/static/Inter-Regular.ttf');
-}
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Julius+Sans+One&display=swap');
 
-:root{
+/*=============== BASES ===============*/
+:root {
     --colorBlue: #051740;
     --gradientBlue: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.19) 100%), #051740;
 }
 
-*{
-    padding: 0%;
-    margin: 0%;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+/*=============== HEADER ===============*/
 header{
-    padding: 2% 14%;
+    width: 100%;
+    padding: 1% 2%;
     background-color: #051740;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 nav{
     color: white;
     display: flex;
-    justify-content: space-between;
     width: 50%;
+    justify-content: space-between;
+    width: 40%;
 }
 
 nav a{
@@ -37,45 +51,84 @@ nav a{
     text-decoration: none;
 }
 
-.footer-top {
-    background: var(--gradientBlue);
-    padding: 2% 14%;
+/*=============== SECTION HEROS ===============*/
+.section-heros {
+    width: 100%;
+    height: 403px;
+    background: url('../assets/eye-4063134_1280.jpg') lightgray 50% / cover no-repeat;
+}
+
+/*=============== SECTION HOME ===============*/
+.section-home {
+    background: linear-gradient(180deg, #AFE1E1 0%, rgba(139, 203, 203, 0.00) 100%);;
+}
+
+.section-home h1 {
+    text-align: center;
+    font-size: 200%;
     color: #FFF;
-    font-family: 'Inter';
+    background: var(--gradientBlue);
+    padding: 3% 0;
+    font-weight: 400;
+}
+
+.section-home .description {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.footer-top img {
-    width: 78px;
-    padding-left: 2rem;
+.section-home .description .paragraphe {
+    font-size: 130%;
+    padding-left: 14%;
+    font-weight: 300;
+}
+
+.section-home .description img {
+    width: 50%;
+    height: 28.688;
+    padding: 2% 14% 0 2%;
+}
+
+/*=============== SECTION AVIS ===============*/
+.section-avis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-avis .cards{
+    display: flex;
+    padding: 4% 14%;
+}
+
+.section-avis .card {
+    background-color: #EFEFEF;
+    border-radius: 50px;
+    padding: 2%;
+}
+
+.star {
+    padding-top: 1%;
+    padding-left: 10%;
+}
+
+.spaceholder {
+    width: 6rem;
+}
+
+.contact-home {
+    font-family: 'Julius Sans One';
+    font-size: 150%;
+    color: #FFF;
+    background: linear-gradient(180deg, #29395C -64.78%, #051740 35.87%, #B0E1E1 136.52%);
+    padding: 2rem;
+    border: none;
+    margin-bottom: 3rem;
+    border-radius: 10px;
     cursor: pointer;
 }
 
-.footer-bottom {
-    color: #FFF;
-    font-family: 'Inter';
-    background-color: var(--colorBlue);
-    width: 100%;
-    padding: 1% 14%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-bottom ul {
-    list-style: none;
-    display: flex;
-       
-}
-
-.footer-bottom a {
-    color: inherit;
-    text-decoration: none;
-    padding-left: 2rem; 
-}
-
+/*=============== CONTACT ==============*/
 .contact-content{
     padding: 2% 14%;
 }
@@ -92,7 +145,7 @@ form{
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    padding: 3%;
     margin-bottom: 2%;
     border-radius: 47px;
     align-items: center;
@@ -127,4 +180,76 @@ label{
 
 .red{
     color: red;
+}
+
+/*=============== FOOTER ===============*/
+.footer-top {
+    background: var(--gradientBlue);
+    padding: 2rem 14%;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-top img {
+    width: 78px;
+    padding-left: 10%;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    color: #FFF;
+    background-color: var(--colorBlue);
+    width: 100%;
+    padding: 1% 14%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 50%;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    display: flex;
+       
+}
+
+.footer-bottom a {
+    color: inherit;
+    text-decoration: none;
+    padding-left: 2rem; 
+}
+
+@media screen and (max-width: 1000px) {
+    .section-avis .cards{
+        height: 80%;
+        display: flex;
+        padding: 5% 14%;
+        flex-direction: column;
+    }
+    .spaceholder {
+        height: 1rem;
+    }
+    .section-avis .card {
+        border-radius: 25px;
+        padding: 2%;
+    }
+
+    .section-home .description .paragraphe {
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .section-home .description .paragraphe {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section-home .description{
+        display: flex;
+        flex-direction: column;
+    }
 }
