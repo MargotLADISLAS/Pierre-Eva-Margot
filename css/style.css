@@ -35,6 +35,10 @@ header{
     align-items: center;
 }
 
+#burger{
+    display: none;
+}
+
 nav{
     color: white;
     display: flex;
@@ -49,6 +53,15 @@ nav a{
     font-family: 'Inter';
     color: white;
     text-decoration: none;
+}
+
+.burger{
+    display: none;
+}
+
+.burger_label{
+    color: white;
+    font-size: 200%;
 }
 
 /*=============== SECTION HEROS ===============*/
@@ -104,7 +117,8 @@ nav a{
 .section-avis .card {
     background-color: #EFEFEF;
     border-radius: 50px;
-    padding: 2%;
+    padding: 3%;
+    font-size: 80%;
 }
 
 .star {
@@ -151,7 +165,7 @@ form{
     align-items: center;
 }
 
-label{
+.contact-content label{
     font-family: 'Inter';
     padding-bottom: 1%;
     width: 100%;
@@ -242,6 +256,15 @@ label{
 }
 
 @media screen and (max-width: 700px) {
+    .burger{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+    #burger:checked ~ nav {
+        display: flex;
+    }
     .section-home .description .paragraphe {
         font-size: 70%;
     }
