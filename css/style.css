@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Julius+Sans+One&family=Londrina+Shadow&display=swap');
+
 
 /*=============== BASES ===============*/
 :root {
@@ -30,6 +31,10 @@ header{
     width: 100%;
     padding: 1% 2%;
     background-color: #051740;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -142,13 +147,13 @@ nav a{
 
 .section-home .description {
     display: flex;
-    align-items: center;
 }
 
 .section-home .description .paragraphe {
     font-size: 130%;
     padding-left: 14%;
-    font-weight: 300;
+    padding-top: 2%;
+    font-weight: 100;
 }
 
 .section-home .description img {
@@ -171,7 +176,7 @@ nav a{
 
 .section-avis .card {
     background-color: #EFEFEF;
-    border-radius: 50px;
+    border-radius: 20px;
     padding: 3%;
     font-size: 80%;
 }
@@ -187,10 +192,10 @@ nav a{
 
 .contact-home {
     font-family: 'Julius Sans One';
-    font-size: 150%;
+    font-size: 130%;
     color: #FFF;
-    background: linear-gradient(180deg, #29395C -64.78%, #051740 35.87%, #B0E1E1 136.52%);
-    padding: 2rem;
+    background: var(--colorBlue);
+    padding: 2%;
     border: none;
     margin-bottom: 3rem;
     border-radius: 10px;
@@ -198,12 +203,13 @@ nav a{
 }
 
 .contact-home:hover {
-    background: #051740;
+    background: #31487f;
 }
 
 /*=============== CONTACT ==============*/
 .contact-content{
     padding: 2% 14%;
+    margin-top: 5rem;
 }
 
 .contact-content h2{
@@ -256,74 +262,74 @@ form{
 }
 
 /*=============== PROPOS ===============*/
-.section {
-    position: relative;
-  }
-.section img {
-    height: 568px;
-    object-fit: cover;
-} 
-
-
-  .full-width { 
+.propos_head img{
     width: 100%;
-  }
-  
- .content .photo-title {
-    background: linear-gradient(180deg, rgba(255,255,255,0.00)0%,  rgba(255,255,255,0.19)100%), #051740;
-    color: #fff;
-    font-size: 36px;
-    text-align: center;
-    padding: 3.125rem 0;
-  }
+    height: 600px;
+    z-index: -1;
+}
 
-  .content .card {
-      display: flex;
-      align-items: center;
-      padding-top: 5%;
-      padding-bottom: 5%;
-  }
-
-  .content .card p {
-      padding-left: 14%;
-      text-align: center;
-  }
-
-  .content .placeholder {
-      width: 15%;
-  }
-
-  .content .card img {
-      width: 50%;
-      padding-right: 14%;
-      
-  }
-  .opacity {
-    opacity: 0.7;
-  }
-  
-  .overlay-text {
+.propos_head_paragraph{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
-  }
+    top: 0;
+    padding-left: 8%;
+    width: 50%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.propos_head_paragraph h2{
+    padding-bottom: 5%;
+    font-family: 'Julius Sans One';
+}
+
+.propos_head_paragraph p{
+    font-family: 'Inter';
+    font-weight: 300;
+}
+
+.chiffres{
+    display: flex;
+    flex-direction: column;
+}
+
+.chiffres h6{
+    padding-left: 8%;
+    color: #FF8E0A;
+    font-family: 'Inter';
+    font-size: 200%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.chiffres_flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.chiffres_flex p {
+    font-family: Londrina Shadow;
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 
 /*=============== FOOTER ===============*/
 .footer-top {
     background: var(--gradientBlue);
-    padding: 2rem 14%;
+    padding: 2% 14%;
     color: #FFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 70%;
 }
 
 .footer-top img {
-    width: 78px;
+    width: 68px;
     padding-left: 10%;
     cursor: pointer;
 }
@@ -378,11 +384,35 @@ form{
     nav{
         display: none;
     }
-    #burger:checked ~ nav {
+    .burger_label:hover ~ nav {
         display: flex;
+        flex-direction: column;
+    }
+    .section-home .description {
+        align-items: center;
     }
     .section-home .description .paragraphe {
         font-size: 70%;
+    }
+    .section-avis .card {
+        font-size: 70%;
+    }
+    .footer-top {
+        font-size: 70%;
+    }
+    .footer-top img {
+        width: 58px;
+        padding-left: 10%;
+        cursor: pointer;
+    }
+
+    form{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .contact-content{
+        padding-left: 1%;
+        padding-bottom: 5%;
     }
 }
 
@@ -390,5 +420,9 @@ form{
     .section-home .description{
         display: flex;
         flex-direction: column;
+    }
+    .footer-top {
+        flex-direction: column;
+        justify-content: space-around;
     }
 }
