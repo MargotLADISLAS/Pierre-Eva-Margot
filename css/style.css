@@ -300,9 +300,7 @@ form{
     color: #FF8E0A;
     font-family: 'Inter';
     font-size: 200%;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 
 .chiffres_flex{
@@ -368,7 +366,7 @@ line-height: normal;
     right: 4%;
     bottom: 16%;
     z-index: 20;
-    width: 8%;
+    width: 8rem;
 }
 
 .boutons_fixed button{
@@ -381,6 +379,43 @@ line-height: normal;
 .boutons_fixed button a{
     text-decoration: none;
     color: white;
+}
+
+
+.partenaires {
+    padding-top: 2%;
+}
+
+.partenaires h6 {
+    padding-left: 14%;
+    color: #FF8E0A;
+    font-family: 'Inter';
+    font-size: 200%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.slide-track {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 14%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    animation: scroll 15s linear infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes scroll {
+    0% { 
+        transform: translateX(calc(250px * 7));
+        
+    }
+    100% { 
+        transform: translateX(calc(-250px * 7))
+    }
 }
 
 /*=============== FOOTER ===============*/
@@ -467,9 +502,23 @@ line-height: normal;
         font-size: 70%;
     }
     .footer-top img {
-        width: 58px;
+        width: 48px;
         padding-left: 10%;
         cursor: pointer;
+    }
+
+    .chiffres{
+        align-items: center;
+    }
+    .chiffres h6{
+        padding-left: 0%;
+    }
+
+    .chiffres_flex{
+        flex-direction: column;
+    }
+    .chiffres_flex p {
+        padding-bottom: 5%;
     }
 
     form{
@@ -479,6 +528,16 @@ line-height: normal;
     .contact-content{
         padding-left: 1%;
         padding-bottom: 5%;
+    }
+
+    .expertise{
+        flex-direction: column;
+        margin-top: 5%;
+    }
+
+    .expertise_partial{
+        padding-left: 14%;
+        width: 70%;
     }
 }
 
