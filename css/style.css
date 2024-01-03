@@ -42,7 +42,7 @@ header{
 
 #burger{
     display: none;
-}
+} 
 
 nav{
     color: white;
@@ -202,6 +202,10 @@ nav a{
     cursor: pointer;
 }
 
+.contact-home a{
+    text-decoration: none;
+    color: white;
+}
 .contact-home:hover {
     background: #31487f;
 }
@@ -408,6 +412,24 @@ line-height: normal;
     overflow: hidden;
 }
 
+.expertise_details{
+    display: none;
+}
+
+.expertise_partial:hover .blue_expertise{
+    background-color: #31487f;
+}
+
+.expertise_partial:hover .expertise_details{
+    display: block;
+    text-align: center;
+    padding: 0% 5%;
+}
+
+.expertise_partial:hover .expertise_titre{
+    display: none;
+}
+
 @keyframes scroll {
     0% { 
         transform: translateX(calc(250px * 7));
@@ -485,7 +507,7 @@ line-height: normal;
     nav{
         display: none;
     }
-    .burger_label:hover ~ nav {
+    #burger:checked + #navigation {
         display: flex;
         flex-direction: column;
     }
